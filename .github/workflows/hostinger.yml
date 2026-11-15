@@ -34,7 +34,7 @@ jobs:
         env:
           PAGES_BASE_PATH: ""
           NEXT_TELEMETRY_DISABLED: "1"
-          NEXT_PUBLIC_GTM_ID: ${{ vars.NEXT_PUBLIC_GTM_ID }}
+          NEXT_PUBLIC_GTM_ID: ${{ vars.NEXT_PUBLIC_GTM_ID || 'GTM-TM8SRVHT' }}
           NEXT_PUBLIC_GSC_VERIFICATION: ${{ vars.NEXT_PUBLIC_GSC_VERIFICATION }}
 
       - name: Publish static website

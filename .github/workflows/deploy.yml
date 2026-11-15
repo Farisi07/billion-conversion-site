@@ -34,7 +34,7 @@ jobs:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
           NEXT_TELEMETRY_DISABLED: 1
           # Optional: set under Settings > Secrets and variables > Actions > Variables
-          NEXT_PUBLIC_GTM_ID: ${{ vars.NEXT_PUBLIC_GTM_ID }}
+          NEXT_PUBLIC_GTM_ID: ${{ vars.NEXT_PUBLIC_GTM_ID || 'GTM-TM8SRVHT' }}
           NEXT_PUBLIC_GSC_VERIFICATION: ${{ vars.NEXT_PUBLIC_GSC_VERIFICATION }}
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
