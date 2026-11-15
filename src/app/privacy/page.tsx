@@ -18,7 +18,7 @@ export default function PrivacyPage() {
           <ul>
             <li>Details you submit in our contact form: name, business name, phone/WhatsApp number, email (optional), country, service of interest and message.</li>
             <li>Messages you send us on WhatsApp.</li>
-            <li>With your consent, analytics data about how you use the site (pages viewed, buttons clicked) via Google Analytics.</li>
+            <li>With your consent, analytics data about how you use the site (pages viewed, buttons clicked) via Google Analytics and Microsoft Clarity (session recordings and heatmaps).</li>
           </ul>
           <h2>Why we use it</h2>
           <ul>

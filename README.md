@@ -64,7 +64,7 @@ node scripts/prepare-logos.mjs <path-to-kit>/assets
 
 - All CTAs lead to `/contact/` or WhatsApp (`+91 95670 33002`) with pre-filled messages that name the page/service.
 - The contact form validates in the browser, has honeypot + timing spam protection, and on success offers **Continue on WhatsApp** with the enquiry pre-written. The site is static, so there is no server-side lead delivery.
-- Analytics: set `NEXT_PUBLIC_GTM_ID` (GitHub repo variable, see Deployment). Consent Mode v2 defaults to denied; a cookie banner appears only when GTM is configured.
+- Analytics: `NEXT_PUBLIC_GTM_ID` (GTM) and `NEXT_PUBLIC_CLARITY_ID` (Microsoft Clarity); defaults are set in the workflows and a GitHub repo variable overrides them. Both start cookieless and switch to full tracking only when the visitor accepts the cookie banner. Consent Mode v2 defaults to denied; a cookie banner appears only when GTM is configured.
 - Events pushed to `dataLayer`: `cta_click`, `form_start`, `generate_lead`, `whatsapp_click`, `phone_click`, `email_click`, `case_study_view`, `outbound_click`. In GA4 mark `generate_lead` and `whatsapp_click` as key events and create a segment for `utm_source=chatgpt.com`.
 
 ## Moving content to a CMS (Sanity)
@@ -76,7 +76,7 @@ Types in `src/lib/content.ts` map 1:1 to Sanity document types: `service`, `busi
 The site is a static export (`output: "export"`, built to `out/`). `.github/workflows/deploy.yml` builds and publishes it on every push to `main`.
 
 1. Repo **Settings > Pages > Source: GitHub Actions** (one time).
-2. Optional repo variables (**Settings > Secrets and variables > Actions > Variables**): `NEXT_PUBLIC_GTM_ID`, `NEXT_PUBLIC_GSC_VERIFICATION`.
+2. Optional repo variables (**Settings > Secrets and variables > Actions > Variables**): `NEXT_PUBLIC_GTM_ID`, `NEXT_PUBLIC_CLARITY_ID`, `NEXT_PUBLIC_GSC_VERIFICATION`.
 3. Custom domain: **Settings > Pages > Custom domain** = `billionconversion.com`, then at your DNS provider add `A` records for `@` to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` and a `CNAME` for `www` to `<username>.github.io`. Tick **Enforce HTTPS** once the certificate is issued, then re-run the workflow so links drop the `/billion-conversion-site` prefix.
 4. Verify in Google Search Console and submit `/sitemap.xml`.
 

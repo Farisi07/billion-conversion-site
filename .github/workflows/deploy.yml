@@ -35,6 +35,7 @@ jobs:
           NEXT_TELEMETRY_DISABLED: 1
           # Optional: set under Settings > Secrets and variables > Actions > Variables
           NEXT_PUBLIC_GTM_ID: ${{ vars.NEXT_PUBLIC_GTM_ID || 'GTM-TM8SRVHT' }}
+          NEXT_PUBLIC_CLARITY_ID: ${{ vars.NEXT_PUBLIC_CLARITY_ID || 'ze2pln1vqt' }}
           NEXT_PUBLIC_GSC_VERIFICATION: ${{ vars.NEXT_PUBLIC_GSC_VERIFICATION }}
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
