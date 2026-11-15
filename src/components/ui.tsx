@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
-import { site, whatsappLink } from "@/lib/site";
+import { site, whatsappLink, asset } from "@/lib/site";
 import type { Faq } from "@/lib/content";
 
 export const icons: Record<string, LucideIcon> = {
@@ -44,7 +44,7 @@ export const icons: Record<string, LucideIcon> = {
 export function Logo({ className, priority }: { className?: string; priority?: boolean }) {
   return (
     <Image
-      src="/brand/logo-horizontal.png"
+      src={asset("/brand/logo-horizontal.png")}
       alt={site.name}
       width={1062}
       height={240}

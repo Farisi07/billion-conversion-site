@@ -8,8 +8,6 @@ import { JsonLd } from "@/components/JsonLd";
 import { formatDate } from "@/lib/format";
 import { PageFaqs } from "@/components/PageFaqs";
 
-// Fully static pages (generateStaticParams); allow a blocking navigation instead of a streamed shell
-export const instant = false;
 
 export function generateStaticParams() {
   return insights.map((a) => ({ slug: a.slug }));

@@ -1,5 +1,3 @@
-"use server";
-
 import { whatsappLink } from "@/lib/site";
 
 export type LeadState = {
@@ -16,11 +14,9 @@ type LeadField = "name" | "business" | "phone" | "email" | "country" | "service"
 const clean = (v: FormDataEntryValue | null, max = 500) => (typeof v === "string" ? v.trim().slice(0, max) : "");
 
 /**
- * Lead submission layer.
- * Delivery (configure via env; all optional, any combination):
- *  - LEAD_WEBHOOK_URL  → POST JSON (Zapier/Make/n8n, Google Sheet, or a CRM later)
- *  - RESEND_API_KEY + LEAD_EMAIL_TO (+ LEAD_EMAIL_FROM) → email notification via Resend
- * The visitor is always offered a pre-filled WhatsApp message as the primary channel.
+ * Lead submission (runs in the browser; the site is static on GitHub Pages).
+ * Validates the form, then hands the visitor a pre-filled WhatsApp message.
+ * No server-side delivery: secret keys cannot be stored on a static host.
  */
 export async function submitLead(_prev: LeadState, form: FormData): Promise<LeadState> {
   // Spam protection: honeypot + minimum fill time
@@ -54,32 +50,5 @@ export async function submitLead(_prev: LeadState, form: FormData): Promise<Lead
   if (Object.keys(errors).length) return { status: "error", errors, message: "Please check the highlighted fields.", values: { name: data.name, business: data.business, phone: data.phone, email: data.email, country: data.country, service: data.service, message: data.message, consent: data.consent } };
 
   const summary = `Hi Billion Conversion, I'm ${data.name} from ${data.business} (${data.country}). I'd like a custom quote for: ${data.service}.${data.message ? ` ${data.message}` : ""}`;
-  const lead = { ...data, submittedAt: new Date().toISOString(), source: "website" };
-
-  const deliveries: Promise<unknown>[] = [];
-  if (process.env.LEAD_WEBHOOK_URL) {
-    deliveries.push(fetch(process.env.LEAD_WEBHOOK_URL, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(lead) }));
-  }
-  if (process.env.RESEND_API_KEY && process.env.LEAD_EMAIL_TO) {
-    deliveries.push(
-      fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: { authorization: `Bearer ${process.env.RESEND_API_KEY}`, "content-type": "application/json" },
-        body: JSON.stringify({
-          from: process.env.LEAD_EMAIL_FROM ?? "Website <onboarding@resend.dev>",
-          to: process.env.LEAD_EMAIL_TO.split(","),
-          subject: `New website lead: ${data.business} (${data.service})`,
-          text: Object.entries(lead).map(([k, v]) => `${k}: ${v}`).join("\n"),
-        }),
-      }),
-    );
-  }
-  if (!deliveries.length) console.info("[lead] No delivery configured — lead not forwarded:", { business: data.business, service: data.service });
-
-  const results = await Promise.allSettled(deliveries);
-  const failed = results.some((r) => r.status === "rejected" || (r.status === "fulfilled" && r.value instanceof Response && !r.value.ok));
-  if (failed) console.error("[lead] One or more deliveries failed");
-
-  // Even if a background delivery fails, WhatsApp continuation still reaches the team.
   return { status: "success", whatsappUrl: whatsappLink(summary) };
 }

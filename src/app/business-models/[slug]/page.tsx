@@ -7,8 +7,6 @@ import { Button, CtaPanel, PageHero, WhatsAppButton } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
 import { PageFaqs } from "@/components/PageFaqs";
 
-// Fully static pages (generateStaticParams); allow a blocking navigation instead of a streamed shell
-export const instant = false;
 
 export function generateStaticParams() {
   return businessModels.map((m) => ({ slug: m.slug }));

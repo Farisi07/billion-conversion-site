@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect } from "react";
-import { site } from "@/lib/site";
+import { site, asset } from "@/lib/site";
 
 /**
  * Once-per-session brand reveal.
@@ -38,9 +38,9 @@ export function IntroLoader() {
       </div>
       <div className="relative flex flex-col items-center">
         <div className="intro-mark">
-          <Image src="/brand/logo-icon.png" alt="" width={419} height={512} priority className="h-24 w-auto md:h-28" />
+          <Image src={asset("/brand/logo-icon.png")} alt="" width={419} height={512} priority className="h-24 w-auto md:h-28" />
         </div>
-        <Image src="/brand/logo-wordmark.png" alt="" width={838} height={188} className="intro-word mt-6 h-auto w-56 md:w-64" />
+        <Image src={asset("/brand/logo-wordmark.png")} alt="" width={838} height={188} className="intro-word mt-6 h-auto w-56 md:w-64" />
         <p className="intro-tag mt-5 font-display text-sm font-semibold tracking-wide text-ivory/80 md:text-base">{site.tagline}</p>
       </div>
       <button type="button" onClick={skip} tabIndex={-1} className="intro-skip">

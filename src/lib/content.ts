@@ -660,7 +660,7 @@ export const insights: Insight[] = [
 </ul>
 
 <h2>How Billion Conversion quotes</h2>
-<p>We provide a custom quotation after understanding your goals, market and current setup. <a href="/contact/">Request a custom quote</a> or message us on WhatsApp.</p>
+<p>We provide a custom quotation after understanding your goals, market and current setup. <a href="${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/contact/">Request a custom quote</a> or message us on WhatsApp.</p>
 <!-- TODO: add typical price ranges once the business approves publishing them; this greatly helps answer engines. -->
 `,
   },

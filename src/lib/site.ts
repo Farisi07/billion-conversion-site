@@ -75,6 +75,11 @@ export const site = {
   primaryCta: { label: "Book a Growth Call", href: "/contact/" },
 };
 
+/** Prefix a /public file path with the deploy sub-folder (GitHub Pages project URL). */
+export function asset(path: string) {
+  return `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+}
+
 export function whatsappLink(message?: string) {
   const text = message ?? "Hi Billion Conversion, I'd like to talk about growing my business.";
   return `https://wa.me/${site.whatsapp.number}?text=${encodeURIComponent(text)}`;

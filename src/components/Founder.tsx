@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { site, whatsappLink } from "@/lib/site";
+import { site, whatsappLink, asset } from "@/lib/site";
 import { cn } from "@/lib/cn";
 import { Button } from "./ui";
 import { SocialLinks } from "./Social";
@@ -21,7 +21,7 @@ export function FounderSection({ headingLevel = "h2", className }: { headingLeve
         <div aria-hidden className="absolute -inset-4 rounded-[32px] bg-gradient-to-br from-emerald/30 via-teal/10 to-transparent blur-2xl" />
         <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] border border-line bg-forest">
           {f.image ? (
-            <Image src={f.image} alt={`${f.name}, ${f.role} of ${site.name}`} fill sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
+            <Image src={asset(f.image)} alt={`${f.name}, ${f.role} of ${site.name}`} fill sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
           ) : (
             // Placeholder until the founder photo is added (site.founder.image)
             <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-[radial-gradient(80%_60%_at_50%_30%,rgb(16_185_129/0.25),transparent)]">

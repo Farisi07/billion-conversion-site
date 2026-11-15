@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { MessageCircle, Phone } from "lucide-react";
 import { businessModels, services } from "@/lib/content";
-import { site, whatsappLink } from "@/lib/site";
+import { site, whatsappLink, asset } from "@/lib/site";
 import { SocialLinks } from "./Social";
 
 export function Footer() {
@@ -12,7 +12,7 @@ export function Footer() {
     <footer className="border-t border-line-soft bg-[#030504]">
       <div className="container-site grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
-          <Image src="/brand/logo-full.png" alt={site.name} width={838} height={720} className="h-auto w-36" />
+          <Image src={asset("/brand/logo-full.png")} alt={site.name} width={838} height={720} className="h-auto w-36" />
           <p className="mt-5 font-display text-lg font-semibold text-ivory">{site.tagline}</p>
           <ul className="mt-6 space-y-3 text-[0.95rem]">
             <li>

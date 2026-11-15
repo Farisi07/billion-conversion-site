@@ -1,4 +1,7 @@
 import type { MetadataRoute } from "next";
+
+export const dynamic = "force-static";
+
 import { businessModels, caseStudies, insights, locations, services } from "@/lib/content";
 import { absoluteUrl, site } from "@/lib/site";
 

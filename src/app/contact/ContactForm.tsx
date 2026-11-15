@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useActionState, useEffect, useRef, useState } from "react";
 import { CheckCircle2, Loader2, MessageCircle } from "lucide-react";
 import { submitLead, type LeadState } from "./actions";
@@ -113,7 +114,7 @@ export function ContactForm() {
       <div>
         <label className="flex items-start gap-3 text-sm leading-relaxed text-ivory/75">
           <input type="checkbox" name="consent" defaultChecked={v.consent} className="mt-1 size-4 accent-emerald" aria-invalid={!!err.consent} aria-describedby={err.consent ? "consent-error" : undefined} />
-          <span>I agree that Billion Conversion may contact me by phone, WhatsApp or email about this enquiry, as described in the <a href="/privacy/" className="text-emerald underline">Privacy Policy</a>.</span>
+          <span>I agree that Billion Conversion may contact me by phone, WhatsApp or email about this enquiry, as described in the <Link href="/privacy/" className="text-emerald underline">Privacy Policy</Link>.</span>
         </label>
         {err.consent && <p id="consent-error" className="mt-2 text-sm text-red-300">{err.consent}</p>}
       </div>
