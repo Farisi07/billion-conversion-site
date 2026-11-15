@@ -1,0 +1,15 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+User-Agent: OAI-SearchBot
+User-Agent: ChatGPT-User
+User-Agent: GPTBot
+User-Agent: PerplexityBot
+User-Agent: ClaudeBot
+User-Agent: Claude-SearchBot
+User-Agent: Google-Extended
+User-Agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://billionconversion.com/sitemap.xml
