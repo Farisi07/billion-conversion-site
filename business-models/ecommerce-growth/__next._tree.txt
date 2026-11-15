@@ -1,8 +1,8 @@
-:HL["/_next/static/chunks/1371mhnpyy8xw.css","style"]
+:HL["/_next/static/chunks/37bue1po8tu_5.css","style"]
 :HL["/_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/media/d8aeca813a9ab546-s.p.18rizl4rsrl42.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/media/e081215b1d68c229-s.p.05kfue1i651q-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/12ddd4ae0f8c9169-s.p.2e28hy4g1zori.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/8783fae6ba59aec4-s.p.2t3ppr9rarygo.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"ecommerce-growth","s":[]},"h":96,"c":"$Q3"}]]
 1:[["children",{"s":"business-models","h":64,"c":"$Q2"}]]
-0:{"b":"ijumKI-SfzC8NH6sBhEeu","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"nmB-CG08_NMjC81S44VzC","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
