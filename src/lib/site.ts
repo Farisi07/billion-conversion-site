@@ -35,7 +35,7 @@ export const site = {
   },
   llpin: null as string | null, // TODO: supply LLPIN from MCA certificate
   /** Year the business started, e.g. "2024". Shown on the brand page and in schema once supplied. */
-  foundingYear: null as string | null, // TODO: confirm founding year
+  foundingYear: "2026" as string | null,
 
   markets: ["Kerala, India", "UAE", "Bahrain", "GCC"],
   areaServed: ["Kerala, India", "United Arab Emirates", "Bahrain", "Gulf Cooperation Council (GCC)"],
