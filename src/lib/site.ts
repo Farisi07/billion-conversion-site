@@ -51,8 +51,11 @@ export const site = {
     role: "Founder",
     /** Drop the photo at public/team/salmanul-faris-b.jpg and set this path */
     image: "/team/salmanul-faris-b.webp" as string | null,
-    // TODO: replace with the founder's own bio (background, experience, focus)
-    bio: "Salmanul Faris B is the founder of Billion Conversion, leading the agency's growth strategy and working directly with clients across Kerala, the UAE, Bahrain and the wider GCC to connect search, paid media, websites and conversion around measurable results.",
+    /** Founder bio (approved by the founder, 17 Nov 2026). Each string is one paragraph. */
+    bio: [
+      "Salmanul Faris B is the founder of Billion Conversion. With a background in commerce, software engineering and digital marketing, he brings together three skills most agencies keep apart: understanding how a business makes money, building the websites and tracking that capture demand, and running the campaigns that create it.",
+      "He founded Billion Conversion in 2026 in Kerala to give businesses a growth partner that is measured by leads, customers and revenue, not likes and impressions. Today he leads the agency's strategy and works directly with clients across Kerala, India, the UAE, Bahrain and the wider GCC.",
+    ],
     social: [
       { label: "Instagram", href: "https://www.instagram.com/salmanul.faris.b/" },
       { label: "LinkedIn", href: "https://www.linkedin.com/in/salmanul-faris-basheer" },

@@ -41,7 +41,11 @@ export function FounderSection({ headingLevel = "h2", className }: { headingLeve
       <div data-reveal style={{ ["--reveal-i" as string]: 1 }}>
         <p className="eyebrow mb-4">Meet the founder</p>
         <H className="font-display text-h2 font-bold text-balance">Growth you can talk to directly.</H>
-        <p className="mt-6 text-lg leading-relaxed text-ivory/80">{f.bio}</p>
+        <div className="mt-6 space-y-4 text-lg leading-relaxed text-ivory/80">
+          {f.bio.map((p) => (
+            <p key={p}>{p}</p>
+          ))}
+        </div>
         <blockquote className="mt-8 border-l-2 border-emerald pl-6 font-display text-xl font-semibold leading-snug text-ivory">
           “{site.tagline}”
         </blockquote>
