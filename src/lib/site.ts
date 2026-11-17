@@ -33,7 +33,7 @@ export const site = {
       // TODO: confirm complete registered address + PIN against MCA record
     },
   },
-  llpin: null as string | null, // TODO: supply LLPIN from MCA certificate
+  llpin: "ADD-1911" as string | null, // MCA LLP Identification Number
   /** Year the business started, e.g. "2024". Shown on the brand page and in schema once supplied. */
   foundingYear: "2026" as string | null,
 

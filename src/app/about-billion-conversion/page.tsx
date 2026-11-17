@@ -37,6 +37,7 @@ export default function BrandPage() {
   const facts: { k: string; v: ReactNode }[] = [
     { k: "Brand name", v: site.name },
     { k: "Legal entity", v: site.legalName },
+    ...(site.llpin ? [{ k: "LLPIN", v: site.llpin }] : []),
     { k: "Type of business", v: "Growth marketing agency" },
     { k: "Founder", v: site.founder.name },
     ...(site.foundingYear ? [{ k: "Founded", v: site.foundingYear }] : []),

@@ -95,6 +95,7 @@ export default function AboutPage() {
           <dl className="mt-6 space-y-4 text-ivory/80">
             <div><dt className="text-sm text-slate">Brand</dt><dd>{site.name}</dd></div>
             <div><dt className="text-sm text-slate">Legal entity</dt><dd>{site.legalName}</dd></div>
+            {site.llpin && <div><dt className="text-sm text-slate">LLPIN</dt><dd>{site.llpin}</dd></div>}
             <div><dt className="text-sm text-slate">Office</dt><dd>{site.offices.operational.lines.join(", ")}</dd></div>
             <div><dt className="text-sm text-slate">Markets served</dt><dd>Kerala (India), the UAE, Bahrain and the wider GCC</dd></div>
           </dl>

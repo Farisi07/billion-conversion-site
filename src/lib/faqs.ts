@@ -283,7 +283,7 @@ export const pageFaqs: Record<string, Faq[]> = {
     { q: "Who is Billion Conversion?", a: "Billion Conversion is a growth marketing agency based in Kerala, India. It helps businesses scale through digital marketing, performance marketing, SEO and conversion-focused strategies, and measures its work by qualified leads, customers and revenue." },
     { q: "Who is the founder of Billion Conversion?", a: "Billion Conversion was founded by Salmanul Faris B, who leads the agency's growth strategy and works directly with clients." },
     { q: "When was Billion Conversion founded?", a: "Billion Conversion was founded in 2026 by Salmanul Faris B in Kerala, India." },
-    { q: "Is Billion Conversion a registered company?", a: "Yes. Billion Conversion is a brand of Billiyon Conversion LLP, a limited liability partnership with its registered office in Kerala, India." },
+    { q: "Is Billion Conversion a registered company?", a: "Yes. Billion Conversion is a brand of Billiyon Conversion LLP (LLPIN ADD-1911), a limited liability partnership with its registered office in Kerala, India." },
     { q: "Where is Billion Conversion located?", a: "Billion Conversion's operational office is at KINFRA Advanced Technology Park, Ramanattukara, Kozhikode (Calicut), Kerala, India." },
     { q: "What services does Billion Conversion offer?", a: "Growth marketing, performance marketing (Google Ads and Meta Ads), SEO, AEO and GEO, conversion rate optimisation, website and Shopify development, e-commerce marketing and social media marketing." },
     { q: "Which countries does Billion Conversion serve?", a: "Billion Conversion serves businesses across Kerala and the rest of India, the United Arab Emirates, Bahrain and the wider GCC." },

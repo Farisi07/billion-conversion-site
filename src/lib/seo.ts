@@ -67,6 +67,7 @@ export function organizationLd() {
     slogan: site.tagline,
     founder: { "@type": "Person", "@id": founderId, name: site.founder.name },
     ...(site.foundingYear ? { foundingDate: site.foundingYear } : {}),
+    ...(site.llpin ? { identifier: { "@type": "PropertyValue", propertyID: "LLPIN", value: site.llpin } } : {}),
     description: site.about.intro,
     address: officeAddressLd(),
     telephone: site.phone.tel,
