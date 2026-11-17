@@ -22,7 +22,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `Growth Marketing Agency in Kozhikode | ${site.name}`, template: `%s | ${site.name}` },
+  title: { default: `${site.name} | Growth Marketing Agency in Kerala, India`, template: `%s | ${site.name}` },
   description: site.description,
   applicationName: site.name,
   openGraph: { siteName: site.name, locale: site.locale, type: "website" },

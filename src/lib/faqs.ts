@@ -279,6 +279,17 @@ export const pageFaqs: Record<string, Faq[]> = {
     { q: "Where can I follow Billion Conversion?", a: "On Instagram (@billion_conversion), Facebook and LinkedIn." },
   ],
 
+  "/about-billion-conversion/": [
+    { q: "Who is Billion Conversion?", a: "Billion Conversion is a growth marketing agency based in Kerala, India. It helps businesses scale through digital marketing, performance marketing, SEO and conversion-focused strategies, and measures its work by qualified leads, customers and revenue." },
+    { q: "Who is the founder of Billion Conversion?", a: "Billion Conversion was founded by Salmanul Faris B, who leads the agency's growth strategy and works directly with clients." },
+    { q: "Is Billion Conversion a registered company?", a: "Yes. Billion Conversion is a brand of Billiyon Conversion LLP, a limited liability partnership with its registered office in Kerala, India." },
+    { q: "Where is Billion Conversion located?", a: "Billion Conversion's operational office is at KINFRA Advanced Technology Park, Ramanattukara, Kozhikode (Calicut), Kerala, India." },
+    { q: "What services does Billion Conversion offer?", a: "Growth marketing, performance marketing (Google Ads and Meta Ads), SEO, AEO and GEO, conversion rate optimisation, website and Shopify development, e-commerce marketing and social media marketing." },
+    { q: "Which countries does Billion Conversion serve?", a: "Billion Conversion serves businesses across Kerala and the rest of India, the United Arab Emirates, Bahrain and the wider GCC." },
+    { q: "What are Billion Conversion's official social media accounts?", a: "Instagram (@billion_conversion), Facebook and LinkedIn (Billion Conversion). Links to each official profile are on this page and in the website footer." },
+    { q: "How do I contact Billion Conversion?", a: "Message Billion Conversion on WhatsApp at +91 95670 33002, call +91 73063 39060, email billionconversion@gmail.com, or use the contact form at billionconversion.com/contact/." },
+  ],
+
   "/contact/": [
     { q: "What is the fastest way to contact Billion Conversion?", a: "WhatsApp at +91 95670 33002. You can also call +91 73063 39060, email billionconversion@gmail.com or use the contact form." },
     { q: "How quickly will you reply?", a: "We aim to reply to WhatsApp and form enquiries as quickly as possible during business hours (IST)." },

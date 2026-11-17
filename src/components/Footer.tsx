@@ -14,6 +14,7 @@ export function Footer() {
         <div>
           <Image src={asset("/brand/logo-full.png")} alt={site.name} width={838} height={720} className="h-auto w-36" />
           <p className="mt-5 font-display text-lg font-semibold text-ivory">{site.tagline}</p>
+          <p className="mt-2 max-w-xs text-sm leading-relaxed text-ivory/60">{site.name} is a growth marketing agency in Kerala, India.</p>
           <ul className="mt-6 space-y-3 text-[0.95rem]">
             <li>
               <a href={`tel:${site.phone.tel}`} data-track="phone:footer" className="inline-flex items-center gap-2.5 text-ivory/80 hover:text-emerald">
@@ -51,6 +52,7 @@ export function Footer() {
           title="Company"
           links={[
             { label: "About & Founder", href: "/about/" },
+            { label: `Who is ${site.name}?`, href: "/about-billion-conversion/" },
             { label: "Insights", href: "/insights/" },
             { label: "Contact", href: "/contact/" },
           ]}

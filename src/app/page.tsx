@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, MapPin, Search, Sparkles, Hexagon } from "lucide-react";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, localBusinessLd } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 import { businessModels, featuredServices, processSteps, trustIndustries } from "@/lib/content";
 import { ArrowLink, Button, CtaPanel, SectionHeader, icons } from "@/components/ui";
@@ -10,10 +11,9 @@ import { ModelArt, ServiceArt } from "@/components/Art";
 import { PageFaqs } from "@/components/PageFaqs";
 
 export const metadata = buildMetadata({
-  title: `Growth Marketing Agency in Kozhikode | ${site.name}`,
+  title: `${site.name} | Growth Marketing Agency in Kerala, India`,
   absoluteTitle: true,
-  description:
-    "Growth marketing agency in Kozhikode (Calicut) helping D2C, B2B and local brands in Kerala, UAE, Bahrain & the GCC win more leads and sales. Get a custom quote.",
+  description: site.description,
   path: "/",
 });
 
@@ -36,11 +36,19 @@ export default function Home() {
         <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-obsidian via-obsidian/60 to-transparent md:via-obsidian/20" />
 
         <div className="container-site flex min-h-[min(100svh,860px)] flex-col justify-center pt-[calc(var(--header-h)+40px)] pb-20">
-          <p className="eyebrow hero-rise">Growth Marketing Agency</p>
-          <h1 className="mt-6 max-w-[15ch] font-display text-display font-extrabold md:max-w-[17ch]">
-            <span className="hero-rise block" style={{ ["--d" as string]: 1 }}>Attract the Right Audience.</span>{" "}
-            <span className="hero-rise block" style={{ ["--d" as string]: 2 }}>Convert More.</span>{" "}
-            <span className="hero-rise block italic text-emerald" style={{ ["--d" as string]: 3 }}>Scale Faster.</span>
+          <h1>
+            {/* Short brand label on phones keeps the eyebrow on one line, as in the original design */}
+            <span className="eyebrow hero-rise">
+              <span>
+                {site.name}
+                <span className="hidden sm:inline"> · Growth Marketing Agency</span>
+              </span>
+            </span>{" "}
+            <span className="mt-6 block max-w-[15ch] font-display text-display font-extrabold md:max-w-[17ch]">
+              <span className="hero-rise block" style={{ ["--d" as string]: 1 }}>Attract the Right Audience.</span>{" "}
+              <span className="hero-rise block" style={{ ["--d" as string]: 2 }}>Convert More.</span>{" "}
+              <span className="hero-rise block italic text-emerald" style={{ ["--d" as string]: 3 }}>Scale Faster.</span>
+            </span>
           </h1>
           <p className="hero-rise mt-7 max-w-xl text-lg leading-relaxed text-ivory/80" style={{ ["--d" as string]: 4 }}>
             We help D2C, B2B and e-commerce businesses generate quality leads, win more customers and grow revenue through SEO, AEO, GEO, performance marketing and conversion optimisation.
@@ -225,6 +233,7 @@ export default function Home() {
       {/* J. Final CTA */}
       <PageFaqs path="/" title="Questions about growing with Billion Conversion" />
       <CtaPanel />
+      <JsonLd data={localBusinessLd()} />
     </>
   );
 }

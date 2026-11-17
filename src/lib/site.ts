@@ -9,7 +9,7 @@ export const site = {
   tagline: "We Turn Growth Into Numbers.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://billionconversion.com").replace(/\/$/, ""),
   description:
-    "Growth marketing agency in Kozhikode (Calicut) helping D2C, B2B and local brands in Kerala, the UAE, Bahrain and the wider GCC win more leads and sales.",
+    "Billion Conversion is a growth marketing agency helping businesses scale through digital marketing, performance marketing, SEO and conversion-focused strategies.",
   locale: "en_IN",
 
   phone: { display: "+91 73063 39060", tel: "+917306339060" },
@@ -34,6 +34,8 @@ export const site = {
     },
   },
   llpin: null as string | null, // TODO: supply LLPIN from MCA certificate
+  /** Year the business started, e.g. "2024". Shown on the brand page and in schema once supplied. */
+  foundingYear: null as string | null, // TODO: confirm founding year
 
   markets: ["Kerala, India", "UAE", "Bahrain", "GCC"],
   areaServed: ["Kerala, India", "United Arab Emirates", "Bahrain", "Gulf Cooperation Council (GCC)"],

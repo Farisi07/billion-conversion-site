@@ -37,6 +37,22 @@ export function buildMetadata({ title, description, path, absoluteTitle, noindex
 
 const orgId = `${site.url}/#organization`;
 const founderId = `${site.url}/#founder`;
+const logoLd = () => ({ "@type": "ImageObject", "@id": `${site.url}/#logo`, url: absoluteUrl("/brand/logo-full.png"), width: 838, height: 720, caption: site.name });
+const officeAddressLd = () => {
+  const o = site.offices.operational;
+  return {
+    "@type": "PostalAddress",
+    streetAddress: o.streetAddress,
+    addressLocality: o.locality,
+    addressRegion: o.region,
+    addressCountry: o.country,
+    ...(o.postalCode ? { postalCode: o.postalCode } : {}),
+  };
+};
+const contactPointsLd = () => [
+  { "@type": "ContactPoint", contactType: "sales", telephone: site.phone.tel, areaServed: ["IN", "AE", "BH"], availableLanguage: ["en", "ml"] },
+  { "@type": "ContactPoint", contactType: "customer service", name: "WhatsApp", telephone: `+${site.whatsapp.number}`, areaServed: ["IN", "AE", "BH"], availableLanguage: ["en", "ml"] },
+];
 
 export function organizationLd() {
   return {
@@ -46,15 +62,31 @@ export function organizationLd() {
     name: site.name,
     legalName: site.legalName,
     url: site.url,
-    logo: absoluteUrl("/brand/logo-full.png"),
+    logo: logoLd(),
+    image: { "@id": `${site.url}/#logo` },
     slogan: site.tagline,
     founder: { "@type": "Person", "@id": founderId, name: site.founder.name },
+    ...(site.foundingYear ? { foundingDate: site.foundingYear } : {}),
     description: site.about.intro,
+    address: officeAddressLd(),
     telephone: site.phone.tel,
     areaServed: site.areaServed,
-    contactPoint: [
-      { "@type": "ContactPoint", contactType: "sales", telephone: site.phone.tel, areaServed: ["IN", "AE", "BH"], availableLanguage: ["en", "ml"] },
+    knowsAbout: [
+      "Growth marketing",
+      "Digital marketing",
+      "Performance marketing",
+      "Google Ads",
+      "Meta Ads",
+      "Search engine optimisation (SEO)",
+      "Answer engine optimisation (AEO)",
+      "Generative engine optimisation (GEO)",
+      "Conversion rate optimisation (CRO)",
+      "Website development",
+      "Shopify development",
+      "E-commerce marketing",
+      "Social media marketing",
     ],
+    contactPoint: contactPointsLd(),
     ...(site.email ? { email: site.email } : {}),
     ...(site.social.length ? { sameAs: site.social.map((s) => s.href) } : {}),
   };
@@ -81,7 +113,9 @@ export function websiteLd() {
     "@id": `${site.url}/#website`,
     url: site.url,
     name: site.name,
+    description: site.description,
     publisher: { "@id": orgId },
+    about: { "@id": orgId },
     inLanguage: "en",
   };
 }
@@ -96,17 +130,32 @@ export function localBusinessLd() {
     name: site.name,
     parentOrganization: { "@id": orgId },
     url: absoluteUrl("/locations/kozhikode/"),
+    description: site.description,
     image: absoluteUrl("/brand/logo-full.png"),
+    logo: absoluteUrl("/brand/logo-full.png"),
     telephone: site.phone.tel,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: o.streetAddress,
-      addressLocality: o.locality,
-      addressRegion: o.region,
-      addressCountry: o.country,
-      ...(o.postalCode ? { postalCode: o.postalCode } : {}),
-    },
+    ...(site.email ? { email: site.email } : {}),
+    address: officeAddressLd(),
+    hasMap: o.mapsUrl,
     areaServed: site.areaServed,
+    founder: { "@id": founderId },
+    ...(site.social.length ? { sameAs: site.social.map((s) => s.href) } : {}),
+  };
+}
+
+/** AboutPage wrapper for brand/entity pages: tells search engines the page is about the organisation. */
+export function aboutPageLd(path: string, name: string, description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${absoluteUrl(path)}#webpage`,
+    url: absoluteUrl(path),
+    name,
+    description,
+    isPartOf: { "@id": `${site.url}/#website` },
+    about: { "@id": orgId },
+    mainEntity: { "@id": orgId },
+    inLanguage: "en",
   };
 }
 

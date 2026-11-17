@@ -2,15 +2,16 @@ import { Check } from "lucide-react";
 import { processSteps } from "@/lib/content";
 import { site } from "@/lib/site";
 import { breadcrumbLd, buildMetadata, founderLd } from "@/lib/seo";
-import { Button, CtaPanel, PageHero } from "@/components/ui";
+import { ArrowLink, Button, CtaPanel, PageHero } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
 import { FounderSection } from "@/components/Founder";
 import { SocialLinks } from "@/components/Social";
 import { PageFaqs } from "@/components/PageFaqs";
 
 export const metadata = buildMetadata({
-  title: "About Us – Growth Marketing Team in Kozhikode",
-  description: "Billion Conversion is a growth marketing agency based in Kozhikode, Kerala, working with D2C, B2B and e-commerce businesses across Kerala, the UAE, Bahrain and the wider GCC.",
+  title: "About Billion Conversion | Growth Marketing Agency in Kerala",
+  absoluteTitle: true,
+  description: "Billion Conversion is a growth marketing agency in Kozhikode, Kerala, working with D2C, B2B and e-commerce brands across India, the UAE, Bahrain and the GCC.",
   path: "/about/",
 });
 
@@ -30,7 +31,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About us"
+        eyebrow={`About ${site.name}`}
         title="We turn growth into numbers."
         intro={site.about.intro}
         crumbs={crumbs}
@@ -48,6 +49,7 @@ export default function AboutPage() {
             <p key={p}>{p}</p>
           ))}
           <p className="font-display text-xl font-semibold text-emerald">{site.tagline}</p>
+          <ArrowLink href="/about-billion-conversion/">Who is {site.name}? Company facts, founder and contacts</ArrowLink>
         </div>
       </section>
 

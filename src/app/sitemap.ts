@@ -6,7 +6,7 @@ import { businessModels, caseStudies, insights, locations, services } from "@/li
 import { absoluteUrl, site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPaths = ["/", "/services/", "/business-models/", "/insights/", "/about/", "/contact/", "/privacy/", "/terms/"];
+  const staticPaths = ["/", "/services/", "/business-models/", "/insights/", "/about/", "/about-billion-conversion/", "/contact/", "/privacy/", "/terms/"];
   const entries = [
     ...staticPaths.map((p) => ({ url: absoluteUrl(p), priority: p === "/" ? 1 : 0.7 })),
     ...services.map((s) => ({ url: absoluteUrl(`/services/${s.slug}/`), priority: 0.9 })),
