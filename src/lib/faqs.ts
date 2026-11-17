@@ -288,11 +288,11 @@ export const pageFaqs: Record<string, Faq[]> = {
     { q: "What services does Billion Conversion offer?", a: "Growth marketing, performance marketing (Google Ads and Meta Ads), SEO, AEO and GEO, conversion rate optimisation, website and Shopify development, e-commerce marketing and social media marketing." },
     { q: "Which countries does Billion Conversion serve?", a: "Billion Conversion serves businesses across Kerala and the rest of India, the United Arab Emirates, Bahrain and the wider GCC." },
     { q: "What are Billion Conversion's official social media accounts?", a: "Instagram (@billion_conversion), Facebook and LinkedIn (Billion Conversion). Links to each official profile are on this page and in the website footer." },
-    { q: "How do I contact Billion Conversion?", a: "Message Billion Conversion on WhatsApp at +91 95670 33002, call +91 73063 39060, email billionconversion@gmail.com, or use the contact form at billionconversion.com/contact/." },
+    { q: "How do I contact Billion Conversion?", a: "Message Billion Conversion on WhatsApp at +91 95670 33002, call +91 73063 39060, email info@billionconversion.com, or use the contact form at billionconversion.com/contact/." },
   ],
 
   "/contact/": [
-    { q: "What is the fastest way to contact Billion Conversion?", a: "WhatsApp at +91 95670 33002. You can also call +91 73063 39060, email billionconversion@gmail.com or use the contact form." },
+    { q: "What is the fastest way to contact Billion Conversion?", a: "WhatsApp at +91 95670 33002. You can also call +91 73063 39060, email info@billionconversion.com or use the contact form." },
     { q: "How quickly will you reply?", a: "We aim to reply to WhatsApp and form enquiries as quickly as possible during business hours (IST)." },
     { q: "Can I visit your office?", a: "Yes, by appointment. Our operational office is at KINFRA Advanced Technology Park, Ramanattukara, Kozhikode. Message us on WhatsApp first." },
     { q: "What happens after I submit the form?", a: "You'll see a confirmation and can continue on WhatsApp with your details already written. We then arrange a short call to understand your goals." },
@@ -303,14 +303,15 @@ export const pageFaqs: Record<string, Faq[]> = {
   ],
 
   "/privacy/": [
-    { q: "What personal data does this website collect?", a: "Details you submit in the contact form, messages you send on WhatsApp and, only with your consent, analytics data about how you use the site." },
-    { q: "Why do you collect my contact details?", a: "To respond to your enquiry and prepare a quotation." },
-    { q: "Do you sell personal data?", a: "No." },
-    { q: "Do you use cookies?", a: "Analytics cookies are used only if you accept them in the cookie banner." },
-    { q: "Who processes my data?", a: "Billiyon Conversion LLP, with service providers such as hosting, email delivery and Google Analytics processing data on our behalf." },
-    { q: "Can I ask you to delete my data?", a: "Yes. Contact us on WhatsApp or by phone to access, correct or delete your data, or to withdraw consent." },
-    { q: "How long do you keep enquiry data?", a: "Only as long as needed to respond and for legitimate business records." },
-    { q: "Which privacy laws apply?", a: "We aim to comply with applicable laws, including India's Digital Personal Data Protection Act and the data protection laws of the UAE and Bahrain where relevant." },
+    { q: "What personal data does this website collect?", a: "Only what you choose to send us — your name, business, phone or WhatsApp number, optional email, country, service of interest and message — plus, only if you accept the cookie banner, analytics about how you use the site." },
+    { q: "Does the contact form store my details on your website?", a: "No. The form checks your details in your browser and prepares a WhatsApp message. Your details reach us only when you press Send in WhatsApp." },
+    { q: "Why do you collect my contact details?", a: "To respond to your enquiry, prepare a quotation and follow up about it. You can ask us to stop contacting you at any time." },
+    { q: "Do you sell personal data?", a: "No. We never sell or rent personal data." },
+    { q: "Do you use cookies?", a: "Only with your consent. If you accept the cookie banner, Google Analytics and Microsoft Clarity set analytics cookies. If you decline, they run in a cookieless mode. We do not use advertising cookies on this website." },
+    { q: "Who processes my data?", a: "Billiyon Conversion LLP, with service providers that help us run the website and communicate with you: WhatsApp (Meta), Google (Analytics and Tag Manager), Microsoft Clarity, our email service provider and our website hosting providers." },
+    { q: "How long do you keep enquiry data?", a: "Enquiries that do not become projects are kept for up to 24 months after our last contact. Client records are kept as long as the law requires. You can ask us to delete your data sooner." },
+    { q: "How can I access, correct or delete my data?", a: "Email info@billionconversion.com or message us on WhatsApp at +91 95670 33002. We aim to respond within 30 days." },
+    { q: "Which privacy laws apply?", a: "We follow India's Digital Personal Data Protection Act, 2023 and, where they apply to you, the data protection laws of the UAE and Bahrain." },
   ],
 
   "/terms/": [
@@ -322,7 +323,7 @@ export const pageFaqs: Record<string, Faq[]> = {
     { q: "Who is responsible for materials I provide for a project?", a: "You confirm you have the rights to provide text, images, logos, videos or data, and remain responsible for ensuring they don't infringe third-party rights." },
     { q: "Is Billion Conversion responsible for third-party platform issues?", a: "No. Platforms such as ad networks, search engines, social media and hosting providers operate under their own terms, and we are not responsible for their independent changes, outages or account decisions." },
     { q: "Which law and courts govern these Terms?", a: "The laws of India, with courts of competent jurisdiction in Thiruvananthapuram, Kerala, subject to any mandatory rights you have under the law of your jurisdiction." },
-    { q: "How do I contact Billion Conversion about these Terms?", a: "Email billionconversion@gmail.com, call +91 73063 39060 or WhatsApp +91 95670 33002." },
+    { q: "How do I contact Billion Conversion about these Terms?", a: "Email info@billionconversion.com, call +91 73063 39060 or WhatsApp +91 95670 33002." },
   ],
 };
 

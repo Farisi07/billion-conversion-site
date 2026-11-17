@@ -14,7 +14,7 @@ export const site = {
 
   phone: { display: "+91 73063 39060", tel: "+917306339060" },
   whatsapp: { display: "+91 95670 33002", number: "919567033002" },
-  email: "billionconversion@gmail.com" as string | null,
+  email: "info@billionconversion.com" as string | null,
 
   offices: {
     operational: {
